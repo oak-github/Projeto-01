@@ -1,0 +1,214 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-image: linear-gradient(rgba(11, 46, 43, 0.8), rgba(11, 46, 43, 0.9));
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+@keyframes floatItem {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    background: linear-gradient(to top, #fde2f7 0%, #fdcbf1 1%, #e6dee9 100%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav {
+    background: rgba(16, 42, 67, 0.7);
+     backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+article {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    color: rgb(230, 230, 230);
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    position: relative; 
+    overflow: hidden; 
+    font-weight: 700;
+}
+
+span > h1 {
+    margin: 0px;
+}
+article::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background: url("minimoss.gif") center/cover no-repeat;
+    filter: blur(6px) brightness(70%);
+    transform: scale(1.1); 
+    z-index: 0;
+}
+h2 {
+    margin-left: 100px;
+}
+
+
+article > * {
+    position: relative;
+    z-index: 1;
+}
+#section {
+    padding: 0px 200px;
+}
+article > span {
+    display: flex;
+    flex-direction: column;
+}
+article > span > h1{
+    font-size: 70px;
+}
+nav > ul {
+    display: flex;
+    justify-content: end;
+    margin: 0px;
+    height: 60px;
+}
+nav > ul > li {
+    margin: 20px;
+}
+main {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#cardContainer {
+    align-self: center;
+    display: grid;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 50px;
+     
+}
+.skillCard::before{
+backdrop-filter: blur(10px);
+}
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    font-weight: bolder;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #cecece;
+    background-color: rgba(31, 65, 62, 0.8);
+    border: 4px solid #363636;
+    transition: 0.5s;
+    
+}
+#cardContainer > li {
+    backdrop-filter: blur(10px);
+}
+.skillCard:hover {
+    transition:0.5s;
+    transform: translate(0%, -10%);
+}
+#skills {
+    height: auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#pfp {
+    height: auto;
+    width: 10vw;
+    border-radius: 50%;
+}
+#items {
+    display: flex;
+}
+#items > ul > li {
+    margin: 100px;
+}
+
+
+.item {
+    
+    display: flex;
+    margin: 20px;
+    
+}
+.item > img {
+    height: auto;
+    margin-right: 40px;
+    width: 10vw;
+    position: relative;
+    animation: floatItem 5s ease-in-out infinite;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.522));
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(8, 32, 30, 0.8);
+}
+footer > ul > li > img {
+    width: 3vh;
+}
+footer > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+footer > ul {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.605);
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
+#gambiarra {
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
